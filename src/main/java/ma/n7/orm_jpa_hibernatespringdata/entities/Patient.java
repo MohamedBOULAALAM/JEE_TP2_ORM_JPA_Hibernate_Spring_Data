@@ -18,7 +18,6 @@ public class Patient {
 
     @Temporal(TemporalType.DATE)
     private Date dateNaissance;
-
     private boolean malade;
     private int score;
 }
