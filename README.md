@@ -94,13 +94,13 @@ Nous avons utilisé `CommandLineRunner` pour insérer des patients, les afficher
 
 ---
 
-## 🧪 Résultat fonctionnel
+### 🧪 6. Résultat fonctionnel
 
 L’application démarre sans erreurs, les entités sont bien mappées, la base de données est initialisée automatiquement, et les opérations sur les patients s’exécutent correctement.
 
 ---
 
-### 🔁 6. Migration de H2 vers MySQL
+### 🔁 7. Migration de H2 vers MySQL
 
 Afin de rendre les données persistantes, nous avons remplacé la base H2 par **MySQL**.
 
