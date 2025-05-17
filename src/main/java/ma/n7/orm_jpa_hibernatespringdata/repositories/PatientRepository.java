@@ -1,4 +1,4 @@
-package ma.n7.orm_jpa_hibernatespringdata.Repository;
+package ma.n7.orm_jpa_hibernatespringdata.repositories;
 import ma.n7.orm_jpa_hibernatespringdata.entities.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
