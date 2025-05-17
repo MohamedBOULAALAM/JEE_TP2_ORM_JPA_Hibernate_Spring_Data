@@ -1,8 +1,10 @@
 package ma.n7.orm_jpa_hibernatespringdata.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import java.util.Date;
 
+@Data
 @Entity
 public class Consultation {
     @Id
