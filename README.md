@@ -128,17 +128,42 @@ Sans modifier le code Java, simplement en relançant l'application avec la nouve
 
 ---
 
-## ✅ Bilan
+### ✅ 8. Bilan
 
 Grâce à cette migration, les données ne sont plus perdues à chaque redémarrage de l'application.  
 Cette configuration est mieux adaptée pour un usage réel en production.
 
 ---
 
+### 🧩 9. Extension du modèle : Médecins, Rendez-vous, Consultations
+
+Dans cette étape, nous avons enrichi notre application pour modéliser un système médical complet en ajoutant les entités suivantes :
+
+#### 📌 Nouvelles entités créées :
+- `Medecin` : représente un médecin avec un nom et une spécialité.
+- `RendezVous` : représente un rendez-vous entre un patient et un médecin, avec un statut (`PENDING`, `DONE`, `CANCELED`) et une date.
+- `Consultation` : représente le rapport médical lié à un rendez-vous.
+
+#### 🔗 Relations JPA implémentées :
+- `RendezVous` → `Patient` (ManyToOne)
+- `RendezVous` → `Medecin` (ManyToOne)
+- `Consultation` → `RendezVous` (OneToOne)
+
+
+#### 💾 Repositories créés :
+- `MedecinRepository`
+- `RendezVousRepository`
+- `ConsultationRepository`
+
+#### 🧪 Insertion de données avec CommandLineRunner :
+À l'exécution, l'application insère automatiquement :
+- des patients
+- des médecins
+- des rendez-vous (ID générés par `UUID.randomUUID().toString()`)
+- une consultation liée à un rendez-vous
 
 
 ---
-
 ## 🧑‍💻 Auteur
 - **Nom :** Mohamed BOULAALAM 
 - **École :** ENSET Mohammedia
