@@ -100,8 +100,46 @@ L’application démarre sans erreurs, les entités sont bien mappées, la base 
 
 ---
 
-## 🧑‍💻 Auteur
+### 🔁 6. Migration de H2 vers MySQL
 
+Afin de rendre les données persistantes, nous avons remplacé la base H2 par **MySQL**.
+
+#### ⚙️ a) Nouvelle configuration dans `application.properties`
+
+Nous avons modifié la configuration pour pointer vers MySQL, avec création automatique de la base de données si elle n'existe pas.
+
+*Capture de la configuration MySQL dans le fichier `application.properties` :*
+
+![Configuration MySQL](Screens/propapp2.png)
+
+---
+
+#### 📊 b) Résultat dans phpMyAdmin
+
+Sans modifier le code Java, simplement en relançant l'application avec la nouvelle configuration, Spring Boot a automatiquement :
+
+- Créé la base `hospital_db` dans MySQL
+- Généré la table `patient`
+- Inséré les données initiales de test depuis le `CommandLineRunner`
+
+*Table `patient` créée automatiquement dans MySQL avec les données :*
+
+![Table Patient dans MySQL](Screens/mysql.png)
+
+---
+
+## ✅ Bilan
+
+Grâce à cette migration, les données ne sont plus perdues à chaque redémarrage de l'application.  
+Cette configuration est mieux adaptée pour un usage réel en production.
+
+---
+
+
+
+---
+
+## 🧑‍💻 Auteur
 - **Nom :** Mohamed BOULAALAM 
 - **École :** ENSET Mohammedia
 - **Filière :** Ingénierie Informatique – Big Data & Cloud Computing
